@@ -4,7 +4,7 @@ import { Home } from "../pages/shared/Home";
 import { Signup } from "../pages/shared/Signup";
 import { Login } from "../pages/shared/Login";
 
-import { Doctor } from "../pages/employee/doctor";
+
 import { EmployeeLayout } from "../layout/EmployeeLayout";
 import { ErrorPage } from "../pages/shared/ErrorPage";
 import { PatientSearch } from "../pages/shared/PatientSearch";
@@ -20,6 +20,7 @@ import { ProtectedRoutes } from "./ProtectedRoutes";
 import { LandingPage } from "../pages/shared/LandingPage";
 import { Admin } from "../pages/employee/Admin";
 import { Reception } from "../pages/employee/Reception";
+import { Doctor } from "../pages/employee/Doctor";
 
 
 

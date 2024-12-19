@@ -115,6 +115,27 @@ export const getAppointmentReception = async (req, res, next) => {
         res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
     }
 };
+export const getBookedAp= async (req, res, next) => {
+    try {
+        
+        const apData = await Appointment.find({ status: ["Booked"] }).sort({ createdAt: -1 }).populate("doctor").populate("patient"); 
+       
+        res.json({ message: "Booked Appointment data fetched", data: apData });
+    } catch (error) {
+        res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
+    }
+};
+
+export const getActiveOp= async (req, res, next) => {
+    try {
+        
+        const opData = await Opdata.find({ status: "ACTIVE" }).sort({ createdAt: -1 }).populate("doctor").populate("patient"); 
+       
+        res.json({ message: "Active op data fetched", data: opData });
+    } catch (error) {
+        res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
+    }
+};
 
 // export const findTodayOplist = async (req,res,next) =>{
 //     const todayDate= new Date()

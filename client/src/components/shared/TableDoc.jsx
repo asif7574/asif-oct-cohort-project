@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-export const TableOp = (props) => {
+
+
+export const TableDoc = (props) => {
   // console.log("props===",props.state[0].name);
   
   return (
@@ -10,6 +12,8 @@ export const TableOp = (props) => {
     <thead>
       <tr>
         <th>Date</th>
+        <th>Patient</th>
+        <th>Patient Id</th>
         <th>Doctor</th>
         <th>Status</th>
     
@@ -19,8 +23,9 @@ export const TableOp = (props) => {
       {props?.state?.map((item)=>(
         <tr key={item?._id}>
         <Link to={`/${props.to}-details/${item?._id}`}>
-        <th>{item?.date}</th>
-        </Link>
+        <th>{item?.date}</th></Link>
+        <th>{item?.name}</th>
+        <th className='text-blue-600'>{item?.patient?.patientID}</th>
         <th>{item?.doctor?.name}</th>
         <th className='text-red-700'>{item?.status}</th>
       </tr>
@@ -32,4 +37,3 @@ export const TableOp = (props) => {
 </div>
   )
 }
-{/* <Link to={`/patientDetails/${item?._id}`}><td>{item.name}</td></Link> */}

@@ -1,5 +1,5 @@
 import e from "express";
-import { bookAppointment, getDoctor, getOpDetails } from "../controllers/commonController.js";
+import { bookAppointment, getAppointmentById, getDoctor, getOpDetails, updateAppointmentStatus } from "../controllers/commonController.js";
 
 
 
@@ -10,6 +10,8 @@ router.get('/get-op-details/:opId',getOpDetails);
 router.get('/active-op')
 router.get('/search-doctor',getDoctor)
 router.post('/book-appointment',bookAppointment)
+router.get('/ap-details/:id', getAppointmentById);
+router.put('/ap-update/:id', updateAppointmentStatus);
 router.delete('/delete-account')
 router.get('/check-employee')
 

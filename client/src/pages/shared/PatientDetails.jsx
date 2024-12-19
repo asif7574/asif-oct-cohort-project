@@ -6,6 +6,7 @@ import { CreateAppointment } from '../other/CreateAppointment';
 import { useFetch } from '../../hooks/useFetch';
 import { TableOp } from '../../components/shared/TableOp';
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export const PatientDetails = () => {
   const [patientDetails,setPatientDetails]=useState({})
@@ -65,7 +66,7 @@ console.log("ap===",apDetails);
               className="w-24 h-24 rounded-full border-2 "
             />
             <h2 className="text-2xl font-bold mt-4">{patientDetails?.name}</h2>
-            <p className="">Role: {patientDetails?.age}</p>
+            <p className="">Age: {patientDetails?.age}</p>
           </div>
           <div className="divider"></div>
           <div className="text-left">

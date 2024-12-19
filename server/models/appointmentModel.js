@@ -22,10 +22,7 @@ const appointmentSchema = new mongoose.Schema(
         status: {
             type:String,
             enum: ["Waitig for Approval","Booked ","Completed","Canceled"],
-
         },
-
-       
     },
 );
 

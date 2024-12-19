@@ -107,3 +107,40 @@ export const bookAppointment = async (req, res, next) => {
         return res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
     }
 };
+
+
+export const getAppointmentById = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const appointment = await Appointment.findById(id).populate('patient').populate('doctor');
+      if (!appointment) {
+        return res.status(404).json({ message: 'Appointment not found' });
+      }
+      res.status(200).json({message:"appointment fetched",data:appointment});
+    } catch (error) {
+        return res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
+    }
+  };
+
+  export const updateAppointmentStatus = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { status } = req.body;
+      console.log(req.body);
+      
+  
+      const appointment = await Appointment.findByIdAndUpdate(
+        id,
+        { status:status },
+        // { new: true }
+      );
+  
+      if (!appointment) {
+        return res.status(404).json({ message: 'Appointment not found' });
+      }
+  
+      res.status(200).json({message:"appointment updated",data:appointment});
+    } catch (error) {
+      res.status(500).json({ message: 'Server error', error });
+    }
+  };
