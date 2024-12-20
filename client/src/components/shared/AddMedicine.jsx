@@ -25,7 +25,7 @@ export const AddMedicine = () => {
           console.log(response, "====response");
           // console.log(response.data.data.employeeID, "====id");
           setDataRes(response.data.data);
-          toast.success("Sign-Up success");
+          toast.success("Medicine Added");
           setIsModalOpen(true);
           
       } catch (error) {

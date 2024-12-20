@@ -58,7 +58,7 @@ export const getOpDetails = async (req, res, next) => {
     try {
         const { opId } = req.params;
 
-        const opData = await Opdata.findById(opId);
+        const opData = await Opdata.findById(opId).populate("doctor").populate("patient");
 
         res.json({ message: "op-data fetched", data: opData });
     } catch (error) {
@@ -159,3 +159,30 @@ export const getAppointmentById = async (req, res) => {
 //         res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
 //     }
 // };
+
+export const ReceptionOpDetailUpdate= async (req,res,next)=>{
+    try {
+        const { opId } = req.params;
+        
+        const {status,total_bill}=req.body;
+console.log(req.body);
+
+        if (!status || !total_bill) {
+            return res.status(404).json({ message: 'Require all fields' });
+          }
+      
+        const updatedRecord = await Opdata.findOneAndUpdate(
+            { _id: opId }, // Find by ID
+            { status,total_bill }, // Update fields
+             // Return the updated document
+        );
+        
+        
+        
+        
+        res.json({message:"Op prescribed ",data:updatedRecord})
+        
+    } catch (error) {
+        return res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
+    }
+}

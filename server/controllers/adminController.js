@@ -1,8 +1,6 @@
-import { Admin } from "../models/adminModel.js";
-import bcrypt from 'bcrypt'
-import { generateToken } from "../utils/token.js";
+
 import { Employee } from "../models/employeeModel.js";
-import { Dept } from "../models/departmentModel.js";
+
 //no front end for admin signup
 // export const adminSignup= async (req,res,next)=>{
 //     try {

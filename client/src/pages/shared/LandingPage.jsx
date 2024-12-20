@@ -16,8 +16,11 @@ export const LandingPage = () => {
       <h1 className="text-8xl font-bold mb-10  text-slate-600 items-center">
         Appolo Hospital Employee Dashboard
       </h1>
-      <h1 className="text-4xl font-bold mb-8 text-primary">
+      <h1 className="text-4xl font-bold mb-4 text-primary">
         Welcome  {profileData?.name || "Employee"} !!
+      </h1>
+      <h1 className="text-2xl font-bold  text-primary">
+        {profileData?.role || ""} 
       </h1>
       <p className="mb-6 text-gray-600">
         Choose Where to be in

@@ -21,6 +21,7 @@ export const CreatePatient = (props) => {
         console.log(response, "====response");
         // console.log(response.data.data.employeeID, "====id");
         // setDataRes(response.data.data);
+        
         toast.success("Patient Created");
         // setIsModalOpen(true);
         props.modalState()

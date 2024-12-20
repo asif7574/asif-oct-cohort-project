@@ -30,7 +30,7 @@ export const Doctor = () => {
   <div className="divider lg:divider-horizontal"></div>
   <div className="card bg-base-300 rounded-box grid h-150 flex-grow place-items-center gap-4">
     <div>
-    <label className='text-2xl font-bold' htmlFor="">Booked Appointments</label>
+    <label className='text-2xl font-bold' htmlFor="">Waiting Appointments</label>
     </div>
   <div>
   <TableDoc to={"ap"} state={waitingAp}/>

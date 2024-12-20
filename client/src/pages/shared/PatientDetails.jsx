@@ -110,7 +110,7 @@ console.log("ap===",apDetails);
     <div>
     <h3 className='text-3xl font-bold'>Op list</h3>
     <div>
-      <TableOp state={opDetails} to={"op"}/>
+      <TableOp state={opDetails} to={"oprec"}/>
     </div>
     </div>
     <div>
@@ -127,7 +127,7 @@ console.log("ap===",apDetails);
             <div className="modal-action">
               <button className="btn bg-red-700" onClick={closeOpModal}>Close</button>
             </div>
-            <CreateOp patient={id} name={name}/>
+            <CreateOp close={closeOpModal} patient={id} name={name}/>
           </div>
         </div>
       )}
@@ -137,7 +137,7 @@ console.log("ap===",apDetails);
             <div className="modal-action">
               <button className="btn bg-red-700" onClick={closeApModal}>Close</button>
             </div>
-            <CreateAppointment patient={id} name={name}/>
+            <CreateAppointment close={closeApModal} patient={id} name={name}/>
           </div>
         </div>
       )}

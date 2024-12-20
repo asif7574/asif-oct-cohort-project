@@ -22,6 +22,7 @@ import { Admin } from "../pages/employee/Admin";
 import { Reception } from "../pages/employee/Reception";
 import { Doctor } from "../pages/employee/Doctor";
 import { ApRecDetails } from "../pages/other/ApRecDetails";
+import { OpRecDetails } from "../pages/other/OpRecDetails";
 
 
 
@@ -78,6 +79,10 @@ export const router = createBrowserRouter([
             {
               path: "op-details/:id",
               element: <OpDetails/>,
+            },
+            {
+              path: "oprec-details/:id",
+              element: <OpRecDetails/>,
             },
             {
               path: "ap-details/:id",

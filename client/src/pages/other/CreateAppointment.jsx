@@ -35,6 +35,7 @@ export const CreateAppointment = (props) => {
         console.log(response, "====response");
         toast.success("Appointment Booked");
         navigate(user.profile_route);
+        props.close()
     } catch (error) {
         toast.error(error.response.data.message);
         console.log(error);
@@ -90,7 +91,7 @@ export const CreateAppointment = (props) => {
             <option value="Surgery">Surgery</option>
             <option value="Gynecology">Gynecology</option>
             <option value="General OP">General OP</option>
-            <option value="Ent">ENT</option>
+     
             <option value="Orthopedics">Orthopedics</option>
             <option value="Cardiology">Cardiology</option>
             <option value="Pulmonology">Pulmonology</option>

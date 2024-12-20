@@ -13,6 +13,7 @@ export const CreateOp = (props) => {
       try {
         const response = await axiosInstance({
           url: '/common/search-doctor',
+          
       });
       setDoctors(response?.data?.data)
       console.log("data====",response?.data?.data);
@@ -34,6 +35,7 @@ export const CreateOp = (props) => {
         const response = await axiosInstance({ method: "POST", url: "/reception/create-op", data });
         console.log(response, "====response");
         toast.success("op-created");
+        props.close()
         navigate(user.profile_route);
     } catch (error) {
         toast.error(error.response.data.message);
@@ -90,7 +92,7 @@ export const CreateOp = (props) => {
             <option value="Surgery">Surgery</option>
             <option value="Gynecology">Gynecology</option>
             <option value="General OP">General OP</option>
-            <option value="Ent">ENT</option>
+            
             <option value="Orthopedics">Orthopedics</option>
             <option value="Cardiology">Cardiology</option>
             <option value="Pulmonology">Pulmonology</option>

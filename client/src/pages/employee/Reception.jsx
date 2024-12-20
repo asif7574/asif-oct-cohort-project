@@ -23,7 +23,7 @@ export const Reception = () => {
     <label className='text-2xl font-bold' htmlFor="">Active Op</label>
     </div>
     <div>
-    <TableRecep state={activeOp}/>
+    <TableRecep to={"oprec"} state={activeOp}/>
     </div>
     
   </div>

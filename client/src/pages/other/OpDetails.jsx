@@ -52,6 +52,12 @@ const { id } = useParams();
             <span className="label-text text-xl font-bold text-center">Name: {opDetails?.name}</span>
           </label>
         </div>
+        {/* Status */}
+        <div className="form-control mb-4">
+          <label className="label">
+            <span className="text-red-500 label-text text-sm font-bold text-center mb-4">Status: {opDetails?.status}</span>
+          </label>
+        </div>
 
       
 
