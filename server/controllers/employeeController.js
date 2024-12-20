@@ -64,7 +64,11 @@ console.log(req.body);
         console.log(token);
         console.log(employeeExist.control_role);
 
-        res.cookie('token',token);
+        res.cookie('token',token, {
+            sameSite: "None",
+            secure: true,
+            httpOnly: true,
+        });
         
         res.json({message:"employee logined"})
 
@@ -94,7 +98,11 @@ export const employeeProfile = async (req, res, next) => {
 export const employeeLogout = async (req, res, next) => {
     try {
         
-     res.clearCookie('token');
+     res.clearCookie('token', {
+        sameSite: "None",
+        secure: true,
+        httpOnly: true,
+    });
 
         res.json({ message: "employee logout success" });
     } catch (error) {
