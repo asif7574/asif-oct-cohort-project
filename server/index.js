@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import { apiRouter } from "./routes/index.js";
 import cors from "cors"
 
+connectDB()
 const app=express();
 app.use(express.json())
 app.use(
@@ -17,14 +18,13 @@ app.use(cookieParser());
 
 
 
-connectDB()
 const port = 3000
 
 
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World!')
-//   })
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
   
   app.listen(port, () => {
     console.log(`app listening on port ${port}`)
@@ -34,7 +34,7 @@ const port = 3000
   })
   app.use('/',apiRouter)
 
-  
+
 
   app.all("*", (req, res) => {
     res.status(404).json({ message: "end point does not exist" });
