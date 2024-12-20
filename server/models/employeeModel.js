@@ -48,7 +48,7 @@ const employeeSchema = new mongoose.Schema(
         },
         control_role: {
             type: String,
-            enum: ["staff","doctor","nurse","pharmacist","receptionist","accountant","lab_technician","ot_staff","accountant",null],
+            enum: ["staff","doctor","nurse","pharmacist","receptionist","accountant","lab_technician","ot_staff","accountant","admin",null],
             default:null,
             // required: true,
         },

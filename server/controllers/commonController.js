@@ -144,3 +144,18 @@ export const getAppointmentById = async (req, res) => {
       res.status(500).json({ message: 'Server error', error });
     }
   };
+
+//   export const getOpDetails = async (req, res, next) => {
+//     try {
+//         const { patientId } = req.params;
+//         const opData = await Opdata.find({ patient: patientId }).sort({ createdAt: -1 }).populate("doctor"); 
+       
+        
+
+        
+
+//         res.json({ message: "op reception-data fetched", data: opData });
+//     } catch (error) {
+//         res.status(error.statusCode || 500).json({ message: error.message || "Internal server error" });
+//     }
+// };

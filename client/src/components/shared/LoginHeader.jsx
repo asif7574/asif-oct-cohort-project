@@ -21,12 +21,12 @@ export const LoginHeader = () => {
     return (
         <div className="flex justify-between items-center w-full px-20  h-24 shadow-2xl  ">
             <Link to={"/"}>
-                <div className="text-3xl font-bold">Logo</div>
+                <div className="text-3xl font-bold">Appolo Hospital</div>
             </Link>
             <nav className="flex gap-16 items-center font-semibold">
                 <Link to={"/home"}>Home</Link>
                 <Link to={"/patient"}>Patient Search</Link>
-                <Link to={"/"}>Main Page</Link>
+                {/* <Link to={"/"}>Main Page</Link> */}
                 {/* <Link to={"/about"}>Op Search</Link> */}
     
 

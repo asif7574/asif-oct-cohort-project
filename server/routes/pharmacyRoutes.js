@@ -5,10 +5,10 @@ import { employeeAuth } from "../middlewares/employeeAuth.js";
 
 const router = e.Router();
 
-router.get("/get-all-drugs",getAllDrugs);
-router.get("/get-drugDetails/:drugId",getDrugDetails);
-router.post("/create-drug", createDrug);
-router.post("/create-pharmacy-bill",employeeAuth(['staff','doctor','receptionist','nurse','ot_staff','lab_technician','pharmacist','accountant']),createPharmacyBill);
+router.get("/get-all-drugs",employeeAuth(['pharmacist','admin']),getAllDrugs);
+router.get("/get-drugDetails/:drugId",employeeAuth(['pharmacist','admin']),getDrugDetails);
+router.post("/create-drug",employeeAuth(['pharmacist','admin']),createDrug);
+router.post("/create-pharmacy-bill",employeeAuth(['pharmacist','admin']),createPharmacyBill);
 router.put("/update-drug");
 router.delete("/drug-delete");
 router.get("/get-ladrug-drug");

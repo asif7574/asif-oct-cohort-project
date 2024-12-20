@@ -21,6 +21,7 @@ import { LandingPage } from "../pages/shared/LandingPage";
 import { Admin } from "../pages/employee/Admin";
 import { Reception } from "../pages/employee/Reception";
 import { Doctor } from "../pages/employee/Doctor";
+import { ApRecDetails } from "../pages/other/ApRecDetails";
 
 
 
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
             {
               path: "ap-details/:id",
               element: <ApDetails/>,
+            },
+            {
+              path: "aprec-details/:id",
+              element: <ApRecDetails/>,
             },
             {
               path: "home",

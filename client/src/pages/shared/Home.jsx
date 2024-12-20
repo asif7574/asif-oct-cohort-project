@@ -7,10 +7,13 @@ export const Home = () => {
       
 
     <div>
-      <section className="hero min-h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url('https://source.unsplash.com/1600x900/?hospital,healthcare')` }}>
+      <section className="hero min-h-[50vh] bg-cover bg-center" style={{ backgroundImage: `url('https://source.unsplash.com/1600x900/?hospital,healthcare')` }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-white">
           <div>
+          <h1 className="text-8xl font-bold mb-10  text-slate-600 items-center">
+        Appolo Hospital
+      </h1>
             <h1 className="text-5xl font-bold mb-4">World-Class Healthcare Services</h1>
             <p className="mb-6 text-lg">
               Providing trusted and compassionate care for your well-being.

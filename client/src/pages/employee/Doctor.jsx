@@ -9,7 +9,7 @@ export const Doctor = () => {
   return (
     <div className=' flex flex-col items-center justify-center gap-10'>
       <div>
-        <Link to={"/pharmacy"}>
+        <Link to={"/patient"}>
         <button className='btn btn-accent'> Patient Search</button>
         </Link>
       </div>
@@ -23,7 +23,7 @@ export const Doctor = () => {
     <label className='text-2xl font-bold' htmlFor="">Active Op</label>
     </div>
     <div>
-    <TableDoc state={activeOp}/>
+    <TableDoc to={"op"} state={activeOp}/>
     </div>
     
   </div>

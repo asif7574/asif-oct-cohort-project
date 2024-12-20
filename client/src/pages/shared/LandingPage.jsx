@@ -11,7 +11,7 @@ export const LandingPage = () => {
  <Link to={"/pharmacy"}> </Link>
     
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center">
       {/* Welcome Message */}
       <h1 className="text-8xl font-bold mb-10  text-slate-600 items-center">
         Appolo Hospital Employee Dashboard

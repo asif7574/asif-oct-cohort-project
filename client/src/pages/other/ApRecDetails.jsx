@@ -5,8 +5,8 @@ import { axiosInstance } from '../../config/axiosInstance';
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-export const ApDetails = () => {
-  const { id } = useParams(); 
+export const ApRecDetails = () => {
+  const { id } = useParams(); // Assuming you're using React Router to pass the appointment ID
   const [appointment, setAppointment] = useState(null);
  const { register, handleSubmit } = useForm();
   
@@ -92,7 +92,7 @@ export const ApDetails = () => {
             >
               <option value="">Select a role</option>
               <option value="Waitig for Approval">Waitig for Approval</option>
-              <option value="Booked">Booked</option>
+              
               <option value="Completed">Completed</option>
               <option value="Canceled">Canceled</option>
               

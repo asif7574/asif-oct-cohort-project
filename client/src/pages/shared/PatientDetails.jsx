@@ -116,7 +116,7 @@ console.log("ap===",apDetails);
     <div>
     <h3 className='text-3xl font-bold'>Appointment list</h3>
     <div>
-    <TableOp state={apDetails} to={"ap"}/>
+    <TableOp state={apDetails} to={"aprec"}/>
     </div>
     </div>
   </div>

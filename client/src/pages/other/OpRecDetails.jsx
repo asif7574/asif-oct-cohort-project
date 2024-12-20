@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useFetch } from '../../hooks/useFetch';
 
-export const OpDetails = () => {
+export const OpRecDetails = () => {
 const { id } = useParams(); 
   const [appointment, setAppointment] = useState(null);
  const { register, handleSubmit } = useForm();

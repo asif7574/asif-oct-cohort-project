@@ -23,17 +23,16 @@ const opdataSchema = new mongoose.Schema(
         doctor: { type: mongoose.Types.ObjectId, ref: "Employee" },
         prescription:{
             type: String,
-            // required: true, 
-            trim: true,
+            default:null,
         },
         diagnosis:{
             type: String,
-            // required: true, 
-            trim: true,
+            default:null,
+            
         },
         status:{
             type: String,
-            enum: ["ACTIVE","OUT"]
+            enum: ["ACTIVE","CONSULTED","DISPENSED","OUT"]
         },
         reception_bill:{
             type:Number,

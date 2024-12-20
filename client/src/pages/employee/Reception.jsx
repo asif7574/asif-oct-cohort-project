@@ -9,7 +9,7 @@ export const Reception = () => {
   return (
     <div className=' flex flex-col items-center justify-center gap-10'>
       <div>
-        <Link to={"/pharmacy"}>
+        <Link to={"/patient"}>
         <button className='btn btn-accent'> Patient Search</button>
         </Link>
       </div>
@@ -33,7 +33,7 @@ export const Reception = () => {
     <label className='text-2xl font-bold' htmlFor="">Booked Appointments</label>
     </div>
   <div>
-  <TableRecep to={"ap"} state={bookedAp}/>
+  <TableRecep to={"aprec"} state={bookedAp}/>
   </div>
  
   </div>
